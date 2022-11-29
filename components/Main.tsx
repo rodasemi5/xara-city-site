@@ -1,12 +1,16 @@
-
+import { NFT } from './NFT'
 
 export const Main = (props: any)=> {
 
     return (
-        <div className="flex flex-col w-[100vw] h-[100vh] p-20 mt-10 mr-20 justify-start items-start">
+        <div className="container flex flex-col h-[100vh] px-96 py-56 -mt-20 ml-2 justify-start items-start">
+            
+        <div className="flex flex-1 flex-row items-start  whitespace-nowrap">
+
+            <div className="flex flex-col m-10">
             <h1 className="
             mb-4 
-            text-xl 
+            text-6xl
             font-extrabold 
             tracking-tight 
             leading-none 
@@ -16,11 +20,11 @@ export const Main = (props: any)=> {
             inline-block
             text-transparent
             bg-clip-text"
-            >Welcome to 
+            >Welcome to
             </h1>
             <h2 className="
             mb-4 
-            text-4xl 
+            text-6xl 
             font-extrabold 
             tracking-tight 
             leading-none 
@@ -42,7 +46,6 @@ export const Main = (props: any)=> {
             text-transparent
             bg-clip-text"
             >Fully Immerasive, Decentralized Ecosystem</h3>
-
             <p className=" 
             font-semibold 
             text-gray-500 
@@ -58,34 +61,80 @@ export const Main = (props: any)=> {
             text-lg
             "
             >and products into Web3.0</p>
- <button  
-    className="
-    inline-flex 
-    justify-center 
-    items-center 
-    py-3 
-    px-5 
-    text-base 
-    font-medium 
-    text-center 
-    text-white 
-    bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 f
-    ocus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900
-    rounded
-    ">
-    Whitepaper
+            <button  
+                className="
+                inline-flex 
+                justify-center 
+                items-center 
+                py-3 
+                px-5
+                text-base 
+                font-medium 
+                text-center 
+                w-32
+                text-white 
+                bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 f
+                ocus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900
+                rounded
+                ">
+                Whitepaper
+                
+            </button> 
+            </div>  
+            
+            <div className='ml-52 w-[700px] -mt-32'>
+            <video autoPlay muted controls>
+                <source src="/xara_card.webm" type="video/webm" />
+                Your browser does not support the video tag.
+            </video>
+            </div>   
+    </div>
     
-</button> 
-
-<div className=" ml-10">
-    <video autoPlay muted controls>
-      <source src="/xara_card.webm" type="video/webm" />
-      Your browser does not support the video tag.
-    </video>
-
-    </div>    
-
-
+            
+        <figure className="md:flex bg-[#020117] rounded-xl p-8 mt-5 md:p-0 dark:bg-slate-800 items-center w-[60vw] flex flex-row ml-5">
+            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
+            <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/market.jpeg" alt="" width="384" height="512" />
+                <blockquote>
+                <p className="text-lg font-medium text-white">
+                    Market Place
+                </p>
+                </blockquote>
+                
+                
+            </div>
+            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
+            <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/play_to_earn.jpg" alt="" width="384" height="512" />
+                <blockquote>
+                <p className="text-lg font-medium text-white">
+                    Play-To-Earn
+                </p>
+                </blockquote>
+                
+                
+            </div>
+            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
+            <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/metaverse.png" alt="" width="384" height="512" />
+                <blockquote>
+                <p className="text-lg font-medium text-white">
+                    Metaverse
+                </p>
+                </blockquote>
+                
+                
+            </div>
+            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
+            <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/trade.png" alt="" width="384" height="512" />
+                <blockquote>
+                <p className="text-lg font-medium text-white">
+                    Trade
+                </p>
+                </blockquote> 
+            </div>
+            
+            </figure> 
         </div>
+        
+
+        
     )
 }

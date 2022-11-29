@@ -3,12 +3,13 @@
 
 export const Navbar = (prop: any) => {
 	return (
-		<nav className = "w-32 flex flex-row  whitespace-nowrap">
-			<div className="flex-none absolute left-4 top-4">
-				<img className = "w-[80px]" src="/xara_logo.png" alt="profile flex-1" />
+		<nav className = " container w-32 flex flex-row  whitespace-nowrap">
+			<div className="flex absolute left-4 top-4 pl-10">
+				<img className = "w-[300px]" src="/xara_logo.png" alt="profile flex-1" />
+				{/* <h1>XARA CITY</h1> */}
 			</div>
 			
-		<div className="flex gap-5 p-3">
+		<div className="flex gap-5 p-5 justify-end items-center">
 			<button className = " h-12 w-20 text-white" >Home</button>
 			<button className = " h-12 w-30 text-white">Ecosystem</button>
 			<button className = " h-12 w-20 text-white">Collection</button>

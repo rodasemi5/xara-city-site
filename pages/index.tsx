@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { NextPage } from 'next'
 import { Navbar } from '../components/Navbar'
 import { Main } from '../components/Main'
+import { NFT } from '../components/NFT'
 
 const Home: NextPage = () => {
   return (
@@ -16,9 +17,10 @@ const Home: NextPage = () => {
 				<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
       </Head>
 
-    <div className="w-[100vw] h-[100vh]  flex flex-col justify-start items-center p-4 bg-cover bg-gradient-to-b from-purple-500 via-black to-black">
+    <div className="con w-full h-full flex flex-col justify-center items-center overflow-auto  bg-gradient-to-b from-purple-500 via-black to-black">
                <Navbar />
                <Main />
+               <NFT />
   </div>
 
   
