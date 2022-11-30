@@ -1,28 +1,32 @@
-import { NFT } from './NFT'
+
 
 export const Main = (props: any)=> {
 
     return (
-        <div className="container flex flex-col h-[100vh] px-96 py-56 -mt-20 ml-2 justify-start items-start">
+        <section id="home" className=" w-[100vw] flex laptop:flex-col flex-col sm:py-16 mt-1 justify-center items-center ">
             
-        <div className="flex flex-1 flex-row items-start  whitespace-nowrap">
+        <div className="flex flex-1 flex-row  items-start justify-center xl:px-0 sm:py-16  whitespace-nowrap ">
 
-            <div className="flex flex-col m-10">
+            <div className="flex flex-col justify-between items-start  p-40 mt-10 ml-1">
             <h1 className="
-            mb-4 
+            flex-1
+            ss:text-[72px]
+            ss:leading-[100px]
+           
             text-6xl
             font-extrabold 
             tracking-tight 
-            leading-none 
+            leading-[75px]
             text-gray-900 md:text-5xl lg:text-6xl 
             dark:text-white 
-            bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+            bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
             inline-block
             text-transparent
-            bg-clip-text"
-            >Welcome to
+            bg-clip-text
+            "
+            >Welcome to 
             </h1>
-            <h2 className="
+             <span className="
             mb-4 
             text-6xl 
             font-extrabold 
@@ -30,29 +34,30 @@ export const Main = (props: any)=> {
             leading-none 
             text-gray-900 md:text-5xl lg:text-6xl 
             dark:text-white
-            bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+            bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
             inline-block
             text-transparent
             bg-clip-text"
-            >Xara City</h2>
+            >Xara City</span> 
             
-            <h3 className="
+            <span className="
             mb-2
             font-extrabold 
+            text-[25px]
             text-gray-900 lg:text-lg sm:px-16 xl:px-1
             dark:text-gray-400
-            bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+            bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
             inline-block
             text-transparent
             bg-clip-text"
-            >Fully Immerasive, Decentralized Ecosystem</h3>
+            >Fully Immerasive, Decentralized Ecosystem</span>
             <p className=" 
             font-semibold 
             text-gray-500 
             dark:text-gray-400
             text-lg
             "
-            >Onboarding assets backend. Web2.0 companies</p>
+            >Onboarding assets backend, Web2.0 companies </p>
             <p className="
             mb-3 
             font-semibold 
@@ -73,8 +78,8 @@ export const Main = (props: any)=> {
                 text-center 
                 w-32
                 text-white 
-                bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 f
-                ocus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900
+                bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
+                focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900
                 rounded
                 ">
                 Whitepaper
@@ -82,7 +87,7 @@ export const Main = (props: any)=> {
             </button> 
             </div>  
             
-            <div className='ml-52 w-[700px] -mt-32'>
+            <div className='w-[100%] h-[100%] relative z-[5] mt-32 '>
             <video autoPlay muted controls>
                 <source src="/xara_card.webm" type="video/webm" />
                 Your browser does not support the video tag.
@@ -91,7 +96,7 @@ export const Main = (props: any)=> {
     </div>
     
             
-        <figure className="md:flex bg-[#020117] rounded-xl p-8 mt-5 md:p-0 dark:bg-slate-800 items-center w-[60vw] flex flex-row ml-5">
+        <figure className="md:flex bg-[#020117] rounded-xl p-3 mt-5 md:p-0 dark:bg-slate-800 items-center w-[60vw] flex flex-row ml-5">
             <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
             <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/market.jpeg" alt="" width="384" height="512" />
                 <blockquote>
@@ -132,7 +137,7 @@ export const Main = (props: any)=> {
             </div>
             
             </figure> 
-        </div>
+        </section>
         
 
         

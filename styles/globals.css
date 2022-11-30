@@ -2,3 +2,23 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
+.blue__gradient {
+    background: linear-gradient(180deg, rgba(180, 165, 225, 0) 0%, #214d76 100%);
+    filter: blur(123px);
+}
+
+.purple__gradient {
+    background: linear-gradient(to top, #710193 0%, #4B0082 100%);
+    filter: blur(900px);
+}
+
+.pink__gradient {
+    background: linear-gradient(106.5deg, rgba(255, 215, 185, 0.91) 23%, rgba(223, 159, 247, 0.8) 93%);
+    filter: blur(900px)
+}
+
+
+* {
+    scroll-behavior: smooth;
+}
