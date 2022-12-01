@@ -182,7 +182,7 @@ export const NFT = (props: any ) => {
                         <img className=" h-96 md:w-48 md:h-auto md:rounded-none mt-5 rounded  mx-auto" src="/alpha_card.jpg" alt="" width="384" height="512" />
                         <p className=" flex flex-col m-10">
                                 <span className="text-white font-bold text-[32px] mb-5">Land Site NFTs</span>
-                                <span className="text-white text-xl">Earn 60 XARA per month through staking</span>
+                                <span className="text-white text-lg">Earn 60 XARA per month through staking</span>
                                 
                         </p>
 
@@ -204,17 +204,12 @@ export const NFT = (props: any ) => {
 
                                 <Dropdown label="Currency">
                                         <Dropdown.Item>
-                                        Dashboard
+                                        Ethereum
                                         </Dropdown.Item>
                                         <Dropdown.Item>
-                                        Settings
+                                        $XARA
                                         </Dropdown.Item>
-                                        <Dropdown.Item>
-                                        Earnings
-                                        </Dropdown.Item>
-                                        <Dropdown.Item>
-                                        Sign out
-                                        </Dropdown.Item>
+                                        
                                 </Dropdown>
 
                                 <button className = "w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Buy</button>
@@ -229,7 +224,7 @@ export const NFT = (props: any ) => {
                         <img className=" h-96 md:w-48 md:h-auto md:rounded-none mt-5 rounded  mx-auto" src="/house.png" alt="" width="384" height="512" />
                         <p className=" flex flex-col m-10">
                                 <span className="text-white font-bold text-[32px] mb-5">Building NFTs</span>
-                                <span className="text-white text-xl">Earn 80 XARA per month through staking</span>
+                                <span className="text-white text-lg">Earn 80 XARA per month through staking</span>
                                 
                         </p>
 
@@ -251,17 +246,12 @@ export const NFT = (props: any ) => {
 
                                 <Dropdown label="Currency">
                                         <Dropdown.Item>
-                                        Dashboard
+                                        Ethereum
                                         </Dropdown.Item>
                                         <Dropdown.Item>
-                                        Settings
+                                        $XARA
                                         </Dropdown.Item>
-                                        <Dropdown.Item>
-                                        Earnings
-                                        </Dropdown.Item>
-                                        <Dropdown.Item>
-                                        Sign out
-                                        </Dropdown.Item>
+                                        
                                 </Dropdown>
 
                 <button className = "w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Buy</button>
@@ -274,7 +264,7 @@ export const NFT = (props: any ) => {
                         <img className=" h-96 md:w-48 md:h-auto md:rounded-none mt-5 rounded  mx-auto" src="/alpha_card.jpg" alt="" width="384" height="512" />
                         <p className=" flex flex-col m-10">
                                 <span className="text-white font-bold text-[32px] mb-5">Land & Building NFTs</span>
-                                <span className="text-white text-xl">Earn 185 XARA per month through staking</span>
+                                <span className="text-white text-lg">Earn 185 XARA per month through staking</span>
                                 
                         </p>
 
@@ -292,21 +282,16 @@ export const NFT = (props: any ) => {
 
                         </div>
 
-                        <div className="flex flex-row m-10 justify-between text-xl items-center">
+                        <div className="flex flex-row m-10 justify-between text-xl items-center ">
 
                         <Dropdown label="Currency">
                                 <Dropdown.Item>
-                                Dashboard
+                                Ethereum
                                 </Dropdown.Item>
                                 <Dropdown.Item>
-                                Settings
+                                $XARA
                                 </Dropdown.Item>
-                                <Dropdown.Item>
-                                Earnings
-                                </Dropdown.Item>
-                                <Dropdown.Item>
-                                Sign out
-                                </Dropdown.Item>
+                                
                         </Dropdown>
 
                         <button className = "w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">Buy</button>
