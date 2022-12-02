@@ -19,14 +19,20 @@ module.exports = {
       "21/9": [21, 9]
     },
     screens: {
-      'tablet': '640px',
-      // => @media (min-width: 640px) { ... }
+      'phone': '390px',
+      // => @media (min-width: 390px) { ... }
+
+      'tablet': '820px',
+      // => @media (min-width: 820px) { ... }
 
       'laptop': '1024px',
       // => @media (min-width: 1024px) { ... }
 
       'desktop': '1280px',
       // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 71536px) { ... }
     }, 
   },
   variants: {

@@ -10,10 +10,10 @@ export const Navbar = (prop: any) => {
 	
 
 	return (
-		<nav className = "container w-[100vw] flex flex-row  whitespace-nowrap">
+		<nav className = "container w-[100vw] flex flex-col tablet:flex-row  whitespace-nowrap">
 			
-			<div className="flex absolute left-4 top-4 pl-10">
-				<img className = "w-[200px]" src="/xara_logo.png" alt="profile" />
+			<div className="flex absolute phone:m-auto tablet:left-4 tablet:top-4 tablet:pl-10">
+				<img className = "w-[200px] hidden tablet:flex" src="/xara_logo.png" alt="profile" />
 			</div>
 
 			{/* Fix later for mobile */}
@@ -61,7 +61,7 @@ export const Navbar = (prop: any) => {
 
 			
 
-		<div className="flex gap-5 p-5 justify-end items-center">
+		<div className=" hidden tablet:flex gap-5 p-5 justify-end items-center ">
 		
 			<button className = " h-12 w-20 text-white" >Home</button>
 			<button className = " h-12 w-30 text-white">Ecosystem</button>

@@ -2,15 +2,31 @@ import { Button } from 'flowbite-react'
 
 export const Team = () => {
   return (
-    <section id="team" className=" w-[100vw]  flex laptop:flex-col flex-col sm:py-16  justify-center items-center ">
+    <section id="team" className=" w-[100vw]  flex  flex-col justify-center items-center ">
 
-<div className="flex flex-col justify-center items-center ">
+    <div className="flex flex-col justify-center items-center ">
      
         
-            <figure className="laptop:flex bg-[#020117] rounded-xl p-3  md:p-0 dark:bg-slate-800  items-center w-[100vw] h-[470px] flex flex-row ">
+            <figure className="w-[100vw] h-[1600px] laptop:h-[470px] flex flex-col laptop:flex-row  bg-[#020117] rounded-xl p-3  dark:bg-slate-800  items-center ">
             
                 
-            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
+            <div className="pt-6  text-center  space-y-4 m-10  laptop:m-auto">
+            <h1 className="
+            ss:text-[72px]
+            ss:leading-[100px]
+            text-6xl
+            font-bold 
+            tracking-tight 
+            leading-[75px]
+            text-gray-900 md:text-5xl lg:text-6xl 
+            dark:text-white 
+            bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
+            laptop:hidden
+            text-transparent
+            bg-clip-text
+            
+            "
+            >Core Team</h1>
             <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/Xara_O.png" alt="" width="384" height="512" />
                 <blockquote>
                 <p className="text-lg font-bold text-slate-600">
@@ -23,7 +39,7 @@ export const Team = () => {
                 
                 
             </div>
-            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
+            <div className="pt-6 text-center space-y-4 -m-10 laptop:m-auto">
             <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/JonRof.png" alt="" width="384" height="512" />
                 <blockquote>
                 <p className="text-lg font-bold text-slate-600">
@@ -36,7 +52,7 @@ export const Team = () => {
                 
                 
             </div>
-            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto mt-6">
+            <div className="pt-6 text-center space-y-4 m-5 laptop:m-auto laptop:mt-6">
             <h1 className="
             ss:text-[72px]
             ss:leading-[100px]
@@ -47,10 +63,10 @@ export const Team = () => {
             text-gray-900 md:text-5xl lg:text-6xl 
             dark:text-white 
             bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
-            inline-block
+            laptop:inline-block
             text-transparent
             bg-clip-text
-            
+            hidden
             "
             >Core Team
             </h1> 
@@ -66,7 +82,7 @@ export const Team = () => {
                 
                 
             </div>
-            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
+            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-5 laptop:m-auto">
             <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/MSD_II.png" alt="" width="384" height="512" />
                 <blockquote>
                 <p className="text-lg font-bold text-slate-600">
@@ -79,7 +95,7 @@ export const Team = () => {
                 
                 
             </div>
-            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
+            <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-5 laptop:m-auto">
             <img className="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/Emvedee.png" alt="" width="384" height="512" />
                 <blockquote>
                 <p className="text-lg font-bold text-slate-600">
@@ -96,8 +112,7 @@ export const Team = () => {
             
             </figure> 
             <div className='flex flex-col mt-10'>
-
-                <p className='text-white -mt-32 text-center font-bold'>Xara City has been created by an established Property Development company <br></br> and team of MBA’S, Actuaries, Architects, Artists, 3D VR Developers, <br></br> Blockchain Developers and Marketers.</p>
+                <p className='text-white -mt-[250px] laptop:-mt-32  text-center font-bold'>Xara City has been created by an established Property Development company <br></br> and team of MBA’S, Actuaries, Architects, Artists, 3D VR Developers, <br></br> Blockchain Developers and Marketers.</p>
                 </div>
             
 

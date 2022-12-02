@@ -305,7 +305,7 @@ export const Faq = () => {
               </Accordion>
         </div>
 
-        <div className="w-[100%] h-[300px]  mt-20 p-auto flex flex-row bg-[#12264c] rounded border-t-1 border-slate-500 text-center items-center">
+        <div className="w-[100%] h-[300px]  mt-20 p-auto flex flex-col laptop:flex-row bg-[#12264c] rounded border-t-1 border-slate-500 text-center items-center">
           
             <h1 className="
             ml-auto
@@ -324,7 +324,7 @@ export const Faq = () => {
             bg-clip-text
             ">Join our <br></br> Community</h1>
 
-            <Button gradientDuoTone="purpleToPink" className="w-40 h-20 mr-auto">
+            <Button gradientDuoTone="purpleToPink" className="w-40 h-20 laptop:mr-auto">
               Join Discord
             </Button>
           

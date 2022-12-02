@@ -3,7 +3,7 @@ import { Footer } from 'flowbite-react'
 export const FooterMain = () => {
   return (
 
-    <section id="footer" className=" w-[100vw]  flex laptop:flex-col flex-col sm:py-6 justify-center items-center ">
+    <section id="footer" className=" w-[100vw]  flex tablet:flex-col flex-col sm:py-6 justify-center items-center ">
     <Footer container={true} className="bg-black">
   <div className="w-full text-center">
     <div className=" w-full justify-between flex flex-col sm:flex sm:justify-between laptop:flex lapyop:grid-cols-1">
@@ -80,15 +80,12 @@ export const FooterMain = () => {
     </div>
     
     <Footer.Divider />
-    <div className="w-full flex flex-row justify-center text-center sm:flex sm:items-center sm:justify-between">
-      <p className='text-white indent-2'> Xara City 2022 </p>
-      <p className='text-white indent-2'>  | Policy </p>
-      <p className='text-white indent-2'>  | Terms  & Conditions</p>
-      <p className='text-white indent-2'>  | Disclaimer </p>
+    <div className="w-full flex flex-row justify-center text-center laptop:gap-10">
+      <p className='text-white indent-2 text-sm laptop:text-xl'> Xara City 2022 </p>
+      <p className='text-white indent-2 text-sm laptop:text-xl'>   Policy </p>
+      <p className='text-white indent-2 text-sm laptop:text-xl'>   Terms  & Conditions</p>
+      <p className='text-white indent-2 text-sm laptop:text-xl'>  Disclaimer </p>
       
-      <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-      
-      </div>
     </div>
   </div>
 </Footer>
