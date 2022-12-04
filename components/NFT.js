@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ethers } from "ethers";
 import {xarianAbi, xarianAddress} from "../src/constants/Xarian"
-
+import toast, { Toaster } from 'react-hot-toast';
 
 // Renderer callback with condition
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -45,7 +45,6 @@ const buyXarianWL = async (amount) => {
   }
 
   const buyXarian = async (amount) => {	
-    console.log("in buyXarian",amount)
     try{
       if (window.ethereum) {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -56,11 +55,11 @@ const buyXarianWL = async (amount) => {
         const eth = Math.floor(amount*5)
         const options = {value: eth.toString() + "0000000000000000" }
         const tx = await xarianWithSigner.mint(amount,options)
-        console.log("tx",tx)
+        toast(<div>Track transaction: <a href={"https://goerli.etherscan.io/tx/" + tx.hash}>Click here!</a> </div>);
       }
     }catch(e){
       console.log(e)
-      alert("Something went wrong!")
+      toast.error("Something went wrong!");
     }
     }
     
@@ -76,7 +75,9 @@ const buyXarianWL = async (amount) => {
           const eth = Math.floor(amount*5)
           const options = {value: eth.toString() + "0000000000000000" }
           const tx = await xarianWithSigner.mint(amount,options)
+          toast('Here is your transaction: ' + tx.hash);
           console.log("tx",tx)
+          console.log("tx",tx.hash)
         }
       }catch(e){
         console.log(e)

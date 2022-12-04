@@ -8,6 +8,7 @@ import { Xaraverse } from "../../components/Xaraverse";
 import { Faq } from "../../components/Faq";
 import { FooterMain } from "../../components/Footer";
 import { Team } from "../../components/Team";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Home: NextPage = () => {
   return (
@@ -33,6 +34,7 @@ const Home: NextPage = () => {
 
         <div className="flex justify-center items-start  bg-black">
           <div className="w-full">
+		    <Toaster />
             <Main />
             <NFT />
             <Xaraverse />
