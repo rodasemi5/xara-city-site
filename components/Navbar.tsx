@@ -1,77 +1,165 @@
-import { useState } from 'react';
-import { close, menu } from '../public/assets'
-import { navLinks } from '../src/constants' 
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
+import Drawer from "@mui/material/Drawer";
+import IconButton from "@mui/material/IconButton";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import MenuIcon from "@mui/icons-material/Menu";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import { ethers } from "ethers";
 
-
-
-export const Navbar = (prop: any) => {
-
-	const [toggle, setToggle] = useState(false)
-	
-
-	return (
-		<nav className = "container w-[100vw] flex flex-col tablet:flex-row  whitespace-nowrap">
-			
-			<div className="flex absolute phone:m-auto tablet:left-4 tablet:top-4 tablet:pl-10">
-				<img className = "w-[200px] hidden tablet:flex" src="/xara_logo.png" alt="profile" />
-			</div>
-
-			{/* Fix later for mobile */}
-			{/* <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-				
-				{navLinks.map((nav, index) => (
-					<li
-						key={nav.id}
-						className={`font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'} text-white`}
-					>
-						<a href={`#${nav.id}`}>{nav.title}</a>
-					</li>
-
-				))}
-
-			</ul>
-
-			<div className='sm:hidden flex flex-1 justify-end items-center'>
-					<img 
-					src={toggle ? close : menu} 
-					alt="menu"
-					className='w-[28px] h-[28px] object-contain'
-					onClick={() => setToggle((prev) => !prev)}
-					/>
-
-				<div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
-					<ul className="list-none flex flex-col justify-end items-center flex-1">
-				
-				{navLinks.map((nav, index) => (
-					<li
-						key={nav.id}
-						className={`font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mr-0' : 'mb-4'} text-white`}
-					>
-						<a href={`#${nav.id}`}>{nav.title}</a>
-					</li>
-
-				))}
-
-			</ul>
-				</div>
-			</div> 
-			
-			
-			*/}
-
-			
-
-		<div className=" hidden tablet:flex gap-5 p-5 justify-end items-center ">
-		
-			<button className = " h-12 w-20 text-white" >Home</button>
-			<button className = " h-12 w-30 text-white">Ecosystem</button>
-			<button className = " h-12 w-20 text-white">Collection</button>
-            <button className = " h-12 w-20 text-white">Xaraverse</button>
-            <button className = " h-12 w-10 text-white">FAQ</button>
-            <button className = " h-12 w-10 text-white">Team</button>
-            <button className = " inline-flex items-center text-white border-3 font-bold py-2 px-4 rounded bg-violet-600">Market Place</button>
-		</div>
-			
-		</nav>
-	);
+interface Props {
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window?: () => Window;
 }
+
+
+
+const drawerWidth = 240;
+
+
+const checkConnect = async () => {	
+	console.log("checkConnect")
+	try{
+	  if(window.ethereum) {
+		const isUnlocked = await window?.ethereum?.request({method: 'eth_accounts'});;
+		if(isUnlocked.length > 0){
+			return("Connected")
+		}else{
+			return("Connect")
+		}
+	  }else{
+		return("Connect")
+	  }
+	}catch(e){
+		console.log(e)
+		return("Connect")
+	}
+
+}
+
+export const Navbar = (props: Props) => {
+  const { window } = props;
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [loaded, setLoading] = React.useState(false);
+  const [walletConnect, setwalletConnect] = React.useState("Connect");
+  const navItems = [
+	"Home",
+	"Ecosystem",
+	"Collection",
+	"Xaraverse",
+	"FAQ",
+	"Team",
+	walletConnect,
+  ];
+
+  React.useEffect(() => {
+    setLoading(true);
+	const checkConnectEffect = async () => {
+		const wStatus = await checkConnect();
+		setwalletConnect(wStatus)
+	}
+	checkConnectEffect();
+  }, []);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Typography className=" pb-20" variant="h6" sx={{ my: 2 }}>
+        <div className="flex absolute left-4 top-4 pl-10">
+          <img className="w-[200px]" src="/xara_logo.png" alt="profile" />
+        </div>
+      </Typography>
+      <Divider />
+      <List>
+        {navItems.map((item) => (
+          <ListItem key={item} disablePadding>
+            <ListItemButton sx={{ textAlign: "center" }}>
+              <ListItemText primary={item} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
+
+  return (
+    <Box className="w-full h-16 laptop:h-24 shadow-xl" sx={{ display: "flex" }}>
+      <AppBar id="nav" position="static" component="nav">
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { md: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", sm: "none", md: "block" },
+            }}
+          >
+            <div className="flex absolute top-4 pl-4">
+              <img className="w-[200px]" src="/xara_logo.png" alt="profile" />
+            </div>
+          </Typography>
+          <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
+            {navItems.map((item, i) => (
+              <button
+                className={
+                  i != navItems.length - 1
+                    ? "normal-case text-slate-400 text-lg hover:text-fuchsia-700 m-2 mt-6"
+                    : (walletConnect == "Connect" ? "inline-flex items-center text-white font-bold py-2 px-4 rounded bg-fuchsia-700 hover:border-2 hover:bg-transparent hover:border-fuchsia-500 m-2 mt-6": 
+					"inline-flex items-center text-white font-bold py-2 px-4 rounded bg-fuchsia-700 hover:border-2 hover:bg-transparent hover:border-fuchsia-500 m-2 mt-6")
+                }
+                key={item}
+              >
+                {item}
+              </button>
+            ))}
+          </Box>
+        </Toolbar>
+      </AppBar>
+      <Box component="nav">
+        <Drawer
+          container={container}
+          variant="temporary"
+          open={mobileOpen}
+          onClose={handleDrawerToggle}
+          ModalProps={{
+            keepMounted: true, // Better open performance on mobile.
+          }}
+          sx={{
+            display: { sm: "block", md: "none" },
+            "& .MuiDrawer-paper": {
+              boxSizing: "border-box",
+              width: drawerWidth,
+            },
+          }}
+        >
+          {drawer}
+        </Drawer>
+      </Box>
+    </Box>
+  );
+};
