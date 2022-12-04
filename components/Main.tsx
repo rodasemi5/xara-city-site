@@ -117,7 +117,7 @@ export const Main = (props: any) => {
               <CustomContentProgressbar color="#3e98c7">
                 <img
                   className="w-28 h-28 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
-                  src="/market.jpeg"
+                  src="/Market_place.png"
                   alt=""
                 />
               </CustomContentProgressbar>
@@ -138,7 +138,7 @@ export const Main = (props: any) => {
               <CustomContentProgressbar color="#3e98c7">
                 <img
                   className="w-28 h-28 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
-                  src="/play_to_earn.jpg"
+                  src="/P2E.png"
                   alt=""
                   width="384"
                   height="512"
