@@ -28,7 +28,6 @@ const drawerWidth = 240;
 
 
 const checkConnect = async () => {	
-	console.log("checkConnect")
 	try{
 	  if(window.ethereum) {
 		const isUnlocked = await window?.ethereum?.request({method: 'eth_accounts'});;
@@ -45,6 +44,20 @@ const checkConnect = async () => {
 		return("Connect")
 	}
 
+}
+
+const connectWallet = async () => {	
+	try{
+		if (window.ethereum) {
+		  const provider = new ethers.providers.Web3Provider(window.ethereum);
+		  await provider.send("eth_requestAccounts", []);
+		  const signer = await provider.getSigner();
+		  console.log("signer",signer)
+		}
+	}catch(e){
+		console.log(e)
+		alert("Something went wrong connecting wallet")
+	}
 }
 
 export const Navbar = (props: Props) => {
@@ -70,6 +83,14 @@ export const Navbar = (props: Props) => {
 	}
 	checkConnectEffect();
   }, []);
+
+  const handleOnClicks = async (sectionIndex: any) => {
+    if(sectionIndex == 6){
+		await connectWallet();
+		const wStatus = await checkConnect();
+		setwalletConnect(wStatus)
+	}
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -126,6 +147,7 @@ export const Navbar = (props: Props) => {
           <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
             {navItems.map((item, i) => (
               <button
+				onClick = {(e)=>handleOnClicks(i)}
                 className={
                   i != navItems.length - 1
                     ? "normal-case text-slate-400 text-lg hover:text-fuchsia-700 m-2 mt-6"
