@@ -55,7 +55,7 @@ const buyXarianWL = async (amount) => {
         const eth = Math.floor(amount*5)
         const options = {value: eth.toString() + "0000000000000000" }
         const tx = await xarianWithSigner.mint(amount,options)
-        toast(<div>Track transaction: <a href={"https://goerli.etherscan.io/tx/" + tx.hash}>Click here!</a> </div>);
+        toast(<div>Track transaction: <a href={"https://goerli.etherscan.io/tx/" + tx.hash} target="_blank">Click here!</a> </div>);
       }
     }catch(e){
       console.log(e)
