@@ -6,42 +6,36 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,css,scss}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle at bottom, rgba(94,32,103,1) 10%, rgba(3,1,22,1) 50%)',
+      }
+    },
     container: {
       center: true,
-      padding: "1rem"
+      padding: "1rem",
     },
     aspectRatio: {
       none: 0,
       square: [1, 1],
       "16/9": [16, 9],
       "4/3": [4, 3],
-      "21/9": [21, 9]
+      "21/9": [21, 9],
     },
     screens: {
-      'phone': '390px',
-      // => @media (min-width: 390px) { ... }
+      tablet: "640px",
+      // => @media (min-width: 640px) { ... }
 
-      'tablet': '820px',
-      // => @media (min-width: 820px) { ... }
-
-      'laptop': '1024px',
+      laptop: "1024px",
       // => @media (min-width: 1024px) { ... }
 
-      'desktop': '1280px',
+      desktop: "1280px",
       // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 71536px) { ... }
-    }, 
+    },
   },
   variants: {
-    aspectRatio: ['responsive'],
+    aspectRatio: ["responsive"],
     extend: {},
   },
-  plugins: [
-
-    require("flowbite/plugin"),
-    require('@tailwindcss/aspect-ratio'),
-  ],
-}
+  plugins: [require("flowbite/plugin"), require("@tailwindcss/aspect-ratio")],
+};
