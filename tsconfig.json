@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/customCircularProgress.js", "components/NFT.js", "components/Xaraverse.jsx"],
   "exclude": ["node_modules"]
 }
