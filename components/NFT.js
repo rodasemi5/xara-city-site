@@ -174,9 +174,11 @@ export const NFT = (props) => {
   };
 
   const handleChange1 = (event) => {
-    const result = event.target.value.replace(/\D/g, "");
-
-    setxarianAmout(Number(result));
+    let result = Number(event.target.value.replace(/\D/g, ""));
+    if(result > 10){
+      result = 10;
+    }
+    setxarianAmout(result);
   };
 
   const handleChange2 = (event) => {
@@ -411,14 +413,20 @@ export const NFT = (props) => {
                         </p>
                       </div>
                       <div className="float-center w-[30%] ml-0">
-                        {/* <input
-                              style={{ width: "5px" }}
+                         <input
+                            style={{
+                            width:"50px",
+                            backgroundColor: "grey",
+                            border: "2px solid #fff",
+                            textAlign: "left",
+                            float: "center",
+                          }}
                               type="text"
                               placeholder=""
                               value={xarianAmount}
                               onChange={handleChange1}
-                            /> */}
-                        <Dropdown
+                            /> 
+                        {/*<Dropdown
                           label=""
                           style={{
                             backgroundColor: "grey",
@@ -439,7 +447,7 @@ export const NFT = (props) => {
                           <Dropdown.Item>8</Dropdown.Item>
                           <Dropdown.Item>9</Dropdown.Item>
                           <Dropdown.Item>10</Dropdown.Item>
-                        </Dropdown>
+                        </Dropdown>*/}
                       </div>
                       <div className="float-right mr-4 pr-4 -mt-2 w-[30%]">
                         <button
