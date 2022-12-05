@@ -236,7 +236,7 @@ export const NFT = (props) => {
               Whitelist mint
               <p>
                 <Countdown
-                  date={new Date("12/5/2022 16:00:00")}
+                  date={new Date("12/5/2022 23:00:00 GMT")}
                   renderer={renderer}
                 />
               </p>
