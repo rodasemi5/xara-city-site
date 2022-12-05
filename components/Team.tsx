@@ -7,7 +7,7 @@ export const Team = () => {
       id="team"
       className=" w-full  flex flex-col  justify-center items-center "
     >
-      <div id="home2" className="w-full p-14">
+      <div id="ecosystem2" className="w-full p-14">
         <div className="flex flex-row mx-auto w-[98vw]">
           <div className="w-1/2">
             <h1
@@ -129,12 +129,11 @@ export const Team = () => {
               </p>
             </blockquote>
           </div>
-          <div className="pt-6 text-center space-y-4 m-auto">
+          <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
             <div
               style={{
                 width: "150px",
                 height: "150px",
-                margin: "auto",
               }}
             >
               <CustomContentProgressbar percentage={70} color="#A21B9F">
@@ -148,9 +147,9 @@ export const Team = () => {
               </CustomContentProgressbar>
             </div>
             <blockquote>
-              <p className="text-lg font-bold text-white">Creative</p>
+              <p className="text-lg font-bold text-white">MSD_II</p>
               <p className="text-lg font-bold text-slate-600">
-                Creative Manager
+                Creative <br /> Manager
               </p>
             </blockquote>
           </div>

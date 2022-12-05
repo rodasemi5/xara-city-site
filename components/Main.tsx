@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { CustomContentProgressbar } from "./customCircularProgress";
+import Link from 'next/link'
 export const Main = (props: any) => {
   return (
     <section className="w-full flex laptop:flex-col flex-col">
@@ -90,7 +91,9 @@ export const Main = (props: any) => {
                 mt-8
                 "
             >
-              Whitepaper
+              <Link target="_blank" href="https://xara-city.gitbook.io/xara-city/">
+                Whitepaper
+              </Link>
             </button>
           </div>
 
@@ -102,7 +105,7 @@ export const Main = (props: any) => {
           </div>
         </div>
       </div>
-      <div id="home2" className="w-full p-20">
+      <div id="ecosystem" className="w-full p-20">
         <figure
           style={{ margin: "auto" }}
           className="bg-[#000] rounded-xl mx-auto p-3 mt-5 items-center w-[98vw] laptop:w-[60vw] flex flex-row grid grid-cols-2 laptop:grid-cols-4"

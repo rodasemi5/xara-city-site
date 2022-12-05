@@ -7,8 +7,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ethers } from "ethers";
-import {xarianAbi, xarianAddress} from "../src/constants/Xarian"
-import toast, { Toaster } from 'react-hot-toast';
+import { xarianAbi, xarianAddress } from "../src/constants/Xarian";
+import toast, { Toaster } from "react-hot-toast";
 
 // Renderer callback with condition
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -25,105 +25,132 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
   }
 };
 
-const buyXarianWL = async (amount) => {	
-  console.log("in connect")
-  try{
+const buyXarianWL = async (amount) => {
+  console.log("in connect");
+  try {
     if (window.ethereum) {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       await provider.send("eth_requestAccounts", []);
       const signer = provider.getSigner();
-      const xarianContract = new ethers.Contract(xarianAddress, xarianAbi, provider);
+      const xarianContract = new ethers.Contract(
+        xarianAddress,
+        xarianAbi,
+        provider
+      );
       const xarianWithSigner = xarianContract.connect(signer);
-      const eth = Math.floor(amount*7)
-      const options = {value: eth.toString() + "0000000000000000" }
-      const tx = xarianWithSigner.WLmint(amount,options)
+      const eth = Math.floor(amount * 7);
+      const options = { value: eth.toString() + "0000000000000000" };
+      const tx = xarianWithSigner.WLmint(amount, options);
     }
-  }catch(e){
-    console.log(e)
-    alert("Something went wrong!")
+  } catch (e) {
+    console.log(e);
+    alert("Something went wrong!");
   }
-  }
+};
 
-  const buyXarian = async (amount) => {	
-    try{
-      if (window.ethereum) {
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        await provider.send("eth_requestAccounts", []);
-        const signer = provider.getSigner();
-        const xarianContract = new ethers.Contract(xarianAddress, xarianAbi, provider);
-        const xarianWithSigner = xarianContract.connect(signer);
-        const eth = Math.floor(amount*5)
-        const options = {value: eth.toString() + "0000000000000000" }
-        const tx = await xarianWithSigner.mint(amount,options)
-        toast(<div>Track transaction: <a href={"https://goerli.etherscan.io/tx/" + tx.hash} target="_blank">Click here!</a> </div>);
-      }
-    }catch(e){
-      console.log(e)
-      toast.error("Something went wrong!");
+const buyXarian = async (amount) => {
+  try {
+    if (window.ethereum) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      await provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      const xarianContract = new ethers.Contract(
+        xarianAddress,
+        xarianAbi,
+        provider
+      );
+      const xarianWithSigner = xarianContract.connect(signer);
+      const eth = Math.floor(amount * 5);
+      const options = { value: eth.toString() + "0000000000000000" };
+      const tx = await xarianWithSigner.mint(amount, options);
+      toast(
+        <div>
+          Track transaction:{" "}
+          <a href={"https://goerli.etherscan.io/tx/" + tx.hash} target="_blank">
+            Click here!
+          </a>{" "}
+        </div>
+      );
     }
+  } catch (e) {
+    console.log(e);
+    toast.error("Something went wrong!");
+  }
+};
+
+const buyBuilding = async (amount) => {
+  console.log("buyBuilding", amount);
+  try {
+    if (window.ethereum) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      await provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      const xarianContract = new ethers.Contract(
+        xarianAddress,
+        xarianAbi,
+        provider
+      );
+      const xarianWithSigner = xarianContract.connect(signer);
+      const eth = Math.floor(amount * 5);
+      const options = { value: eth.toString() + "0000000000000000" };
+      const tx = await xarianWithSigner.mint(amount, options);
+      toast("Here is your transaction: " + tx.hash);
+      console.log("tx", tx);
+      console.log("tx", tx.hash);
     }
-    
-    const buyBuilding = async (amount) => {	
-      console.log("buyBuilding",amount)
-      try{
-        if (window.ethereum) {
-          const provider = new ethers.providers.Web3Provider(window.ethereum);
-          await provider.send("eth_requestAccounts", []);
-          const signer = provider.getSigner();
-          const xarianContract = new ethers.Contract(xarianAddress, xarianAbi, provider);
-          const xarianWithSigner = xarianContract.connect(signer);
-          const eth = Math.floor(amount*5)
-          const options = {value: eth.toString() + "0000000000000000" }
-          const tx = await xarianWithSigner.mint(amount,options)
-          toast('Here is your transaction: ' + tx.hash);
-          console.log("tx",tx)
-          console.log("tx",tx.hash)
-        }
-      }catch(e){
-        console.log(e)
-        alert("Something went wrong!")
-      }
-      }  
-      
-      const buyLand = async (amount) => {	
-        console.log("buyLand",amount)
-        try{
-          if (window.ethereum) {
-            const provider = new ethers.providers.Web3Provider(window.ethereum);
-            await provider.send("eth_requestAccounts", []);
-            const signer = provider.getSigner();
-            const xarianContract = new ethers.Contract(xarianAddress, xarianAbi, provider);
-            const xarianWithSigner = xarianContract.connect(signer);
-            const eth = Math.floor(amount*5)
-            const options = {value: eth.toString() + "0000000000000000" }
-            const tx = await xarianWithSigner.mint(amount,options)
-            console.log("tx",tx)
-          }
-        }catch(e){
-          console.log(e)
-          alert("Something went wrong!")
-        }
-        }
-        
-        const buyCombo = async (amount) => {	
-          console.log("buyCombo",amount)
-          try{
-            if (window.ethereum) {
-              const provider = new ethers.providers.Web3Provider(window.ethereum);
-              await provider.send("eth_requestAccounts", []);
-              const signer = provider.getSigner();
-              const xarianContract = new ethers.Contract(xarianAddress, xarianAbi, provider);
-              const xarianWithSigner = xarianContract.connect(signer);
-              const eth = Math.floor(amount*5)
-              const options = {value: eth.toString() + "0000000000000000" }
-              const tx = await xarianWithSigner.mint(amount,options)
-              console.log("tx",tx)
-            }
-          }catch(e){
-            console.log(e)
-            alert("Something went wrong!")
-          }
-          }          
+  } catch (e) {
+    console.log(e);
+    alert("Something went wrong!");
+  }
+};
+
+const buyLand = async (amount) => {
+  console.log("buyLand", amount);
+  try {
+    if (window.ethereum) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      await provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      const xarianContract = new ethers.Contract(
+        xarianAddress,
+        xarianAbi,
+        provider
+      );
+      const xarianWithSigner = xarianContract.connect(signer);
+      const eth = Math.floor(amount * 5);
+      const options = { value: eth.toString() + "0000000000000000" };
+      const tx = await xarianWithSigner.mint(amount, options);
+      console.log("tx", tx);
+    }
+  } catch (e) {
+    console.log(e);
+    alert("Something went wrong!");
+  }
+};
+
+const buyCombo = async (amount) => {
+  console.log("buyCombo", amount);
+  try {
+    if (window.ethereum) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      await provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      const xarianContract = new ethers.Contract(
+        xarianAddress,
+        xarianAbi,
+        provider
+      );
+      const xarianWithSigner = xarianContract.connect(signer);
+      const eth = Math.floor(amount * 5);
+      const options = { value: eth.toString() + "0000000000000000" };
+      const tx = await xarianWithSigner.mint(amount, options);
+      console.log("tx", tx);
+    }
+  } catch (e) {
+    console.log(e);
+    alert("Something went wrong!");
+  }
+};
 
 export const NFT = (props) => {
   const [nav1, setNav1] = useState();
@@ -146,33 +173,33 @@ export const NFT = (props) => {
     fade: true,
   };
 
-  const handleChange1 = event => {
-    const result = event.target.value.replace(/\D/g, '');
+  const handleChange1 = (event) => {
+    const result = event.target.value.replace(/\D/g, "");
 
     setxarianAmout(Number(result));
   };
 
-  const handleChange2 = event => {
-    const result = event.target.value.replace(/\D/g, '');
+  const handleChange2 = (event) => {
+    const result = event.target.value.replace(/\D/g, "");
 
     setlandAmount(Number(result));
   };
 
-  const handleChange3 = event => {
-    const result = event.target.value.replace(/\D/g, '');
+  const handleChange3 = (event) => {
+    const result = event.target.value.replace(/\D/g, "");
 
     setbuildAmount(Number(result));
   };
 
-  const handleChange4 = event => {
-    const result = event.target.value.replace(/\D/g, '');
+  const handleChange4 = (event) => {
+    const result = event.target.value.replace(/\D/g, "");
 
     setcomboAmount(Number(result));
   };
 
   return (
     <div className="w-full  bg-[#0A091B] items-center -mt-4 flex flex-col ">
-      <div className="container w-[98vw] flex flex-col  justify-start items-center ">
+      <div id="collection" className="container w-[98vw] flex flex-col  justify-start items-center ">
         <h1
           className="
             -mb-4
@@ -206,7 +233,10 @@ export const NFT = (props) => {
             <div className="h-20 w-96 text-center text-2xl text-white font-bold p-2 rounded-b-lg  mx-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
               Whitelist mint
               <p>
-                <Countdown date={new Date("12/5/2022 16:00:00")} renderer={renderer} />
+                <Countdown
+                  date={new Date("12/5/2022 16:00:00")}
+                  renderer={renderer}
+                />
               </p>
             </div>
           </div>
@@ -369,12 +399,61 @@ export const NFT = (props) => {
                   >
                     0.08 ETH
                   </p>
-                </div> 
+                </div>
                 <div className="flex flex-row gap-10 mt-6">
-                {xarianReady ?
-                <div>
-                  <p
-                    className="
+                  {xarianReady ? (
+                    <div className="flex flex-row w-full">
+                      <div className="float-left  -mt-4 w-[40%] mr-0">
+                        <p className="m-4 text-[#7B8B9C] pr-4">
+                          Select QTY
+                          <br />
+                          Maximum - 10
+                        </p>
+                      </div>
+                      <div className="float-center w-[30%] ml-0">
+                        {/* <input
+                              style={{ width: "5px" }}
+                              type="text"
+                              placeholder=""
+                              value={xarianAmount}
+                              onChange={handleChange1}
+                            /> */}
+                        <Dropdown
+                          label=""
+                          style={{
+                            backgroundColor: "grey",
+                            border: "2px solid #fff",
+                            textAlign: "left",
+                            float: "center",
+                          }}
+                          value={xarianAmount}
+                          onChange={handleChange1}
+                        >
+                          <Dropdown.Item>1</Dropdown.Item>
+                          <Dropdown.Item>2</Dropdown.Item>
+                          <Dropdown.Item>3</Dropdown.Item>
+                          <Dropdown.Item>4</Dropdown.Item>
+                          <Dropdown.Item>5</Dropdown.Item>
+                          <Dropdown.Item>6</Dropdown.Item>
+                          <Dropdown.Item>7</Dropdown.Item>
+                          <Dropdown.Item>8</Dropdown.Item>
+                          <Dropdown.Item>9</Dropdown.Item>
+                          <Dropdown.Item>10</Dropdown.Item>
+                        </Dropdown>
+                      </div>
+                      <div className="float-right mr-4 pr-4 -mt-2 w-[30%]">
+                        <button
+                          onClick={(e) => buyXarian(xarianAmount)}
+                          className=" w-[6rem] laptop:flex-1 text-white border-3 text-2xl font-bold  h-14 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 float-right items-right "
+                        >
+                          Mint
+                        </button>
+                      </div>
+                    </div>
+                  ) : (
+                    <div>
+                      <p
+                        className="
                 m-4 
                 -mt-1
                 -mr-2
@@ -383,34 +462,11 @@ export const NFT = (props) => {
                 w-fit
                 text-[#7B8B9C] md:text-5xl lg:text-6xl 
                 "
-                  >
-                <input 
-                style={{ width:"200px" }}
-                  type="text"
-                  placeholder=""
-                  value={xarianAmount}
-                  onChange={handleChange1}
-                />
-              
-                  
-                  <button onClick={(e)=>buyXarian(xarianAmount)} className=" w-[6rem] laptop:flex-1 m-4 mr-8 text-white border-3 text-2xl font-bold  h-14 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 -mt-1 laptop:-mt-5">
-                    Mint
-                  </button>
-                  </p>
-                  </div>:                   
-                  <div><p
-                    className="
-                m-4 
-                -mt-1
-                -mr-2
-                text-lg
-                font-semibold
-                w-fit
-                text-[#7B8B9C] md:text-5xl lg:text-6xl 
-                "
-                  >COMING SOON!</p></div>
-
-                }
+                      >
+                        COMING SOON!
+                      </p>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -491,52 +547,58 @@ export const NFT = (props) => {
               Earn 60 XARA per month through staking
             </span>
           </p>
-        {comboReady ?
-        <div>
-          <div className="flex flex-col m-10 -mt-4 -mb-4">
-            <p>
-              <span className="text-[#7B8B9C] font-normal text-lg mr-48">
-                ETH Price:
-              </span>
-              <span className="text-[#7B8B9C] text-lg">0.20 ETH</span>
-            </p>
+          {comboReady ? (
+            <div>
+              <div className="flex flex-col m-10 -mt-4 -mb-4">
+                <p>
+                  <span className="text-[#7B8B9C] font-normal text-lg mr-48">
+                    ETH Price:
+                  </span>
+                  <span className="text-[#7B8B9C] text-lg">0.20 ETH</span>
+                </p>
 
-            <p>
-              <span className="text-[#7B8B9C] font-normal text-lg mr-44">
-                XARA Price:
-              </span>
-              <span className="text-[#7B8B9C] text-lg">250 XARA</span>
-            </p>
-          </div>
+                <p>
+                  <span className="text-[#7B8B9C] font-normal text-lg mr-44">
+                    XARA Price:
+                  </span>
+                  <span className="text-[#7B8B9C] text-lg">250 XARA</span>
+                </p>
+              </div>
 
-          <div className="flex flex-row m-10 justify-between text-lg items-center">
-            <Dropdown
-              label="Currency"
-              style={{
-                backgroundColor: "transparent",
-                border: "2px solid #8840C4",
-              }}
-            >
-              <Dropdown.Item>Ethereum</Dropdown.Item>
-              <Dropdown.Item>$XARA</Dropdown.Item>
-            </Dropdown>
-            <input
+              <div className="flex flex-row m-10 justify-between text-lg items-center">
+                <Dropdown
+                  label="Currency"
+                  style={{
+                    backgroundColor: "transparent",
+                    border: "2px solid #8840C4",
+                  }}
+                >
+                  <Dropdown.Item>Ethereum</Dropdown.Item>
+                  <Dropdown.Item>$XARA</Dropdown.Item>
+                </Dropdown>
+                <input
                   type="text"
                   placeholder=""
                   value={landAmount}
                   onChange={handleChange2}
                 />
 
-            <button onClick={(e)=>buyLand(landAmount)} className="w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
-              Buy
-            </button>
-          </div>
-        </div> : <div>           <p className=" flex flex-col m-10">
-            <span className="text-[#7B8B9C] text-lg">
-              COMING SOON!
-            </span>
-          </p></div>
-            }
+                <button
+                  onClick={(e) => buyLand(landAmount)}
+                  className="w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"
+                >
+                  Buy
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div>
+              {" "}
+              <p className=" flex flex-col m-10">
+                <span className="text-[#7B8B9C] text-lg">COMING SOON!</span>
+              </p>
+            </div>
+          )}
         </div>
 
         <div className=" w-[96vw] m-auto max-w-[450px] laptop:w-[30%] m-auto h-fit laptop:m-[1.6%]  bg-[#1E0F2F] rounded-lg items-center  mb-10 laptop:mb-0">
@@ -576,45 +638,50 @@ export const NFT = (props) => {
               Earn 80 XARA per month through staking
             </span>
           </p>
-          {comboReady ?
-        <div>
-          <div className="flex flex-col m-10 -mt-4 -mb-4">
-            <p>
-              <span className="text-[#7B8B9C] font-normal text-lg mr-48">
-                ETH Price:
-              </span>
-              <span className="text-[#7B8B9C] text-lg">0.25 ETH</span>
-            </p>
+          {comboReady ? (
+            <div>
+              <div className="flex flex-col m-10 -mt-4 -mb-4">
+                <p>
+                  <span className="text-[#7B8B9C] font-normal text-lg mr-48">
+                    ETH Price:
+                  </span>
+                  <span className="text-[#7B8B9C] text-lg">0.25 ETH</span>
+                </p>
+              </div>
+              <div className="flex flex-row m-10 justify-between text-lg items-center">
+                <Dropdown
+                  label="Ethereum"
+                  style={{
+                    backgroundColor: "transparent",
+                    border: "2px solid #8840C4",
+                  }}
+                >
+                  <Dropdown.Item>Ethereum</Dropdown.Item>
+                </Dropdown>
 
-          </div>
-
-          <div className="flex flex-row m-10 justify-between text-lg items-center">
-            <Dropdown
-              label="Ethereum"
-              style={{
-                backgroundColor: "transparent",
-                border: "2px solid #8840C4",
-              }}
-            >
-              <Dropdown.Item>Ethereum</Dropdown.Item>
-            </Dropdown>
-
-            <input
+                <input
                   type="text"
                   placeholder=""
                   value={buildAmount}
                   onChange={handleChange3}
                 />
 
-            <button onClick={(e)=> buyBuilding(buildAmount)} className="w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
-              Buy
-            </button>
-          </div>         </div> : <div>           <p className=" flex flex-col m-10">
-            <span className="text-[#7B8B9C] text-lg">
-              COMING SOON!
-            </span>
-          </p></div>
-            }
+                <button
+                  onClick={(e) => buyBuilding(buildAmount)}
+                  className="w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"
+                >
+                  Buy
+                </button>
+              </div>{" "}
+            </div>
+          ) : (
+            <div>
+              {" "}
+              <p className=" flex flex-col m-10">
+                <span className="text-[#7B8B9C] text-lg">COMING SOON!</span>
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="w-[96vw] m-auto max-w-[450px] laptop:w-[30%] m-auto h-fit laptop:m-[1.6%] bg-[#1E0F2F] rounded-lg items-center">
@@ -664,62 +731,65 @@ export const NFT = (props) => {
               Earn 185 XARA per month through staking
             </span>
           </p>
-          {comboReady ?
-        <div>
-          <div className="flex flex-col m-10 -mt-4 -mb-4">
-            <p>
-              <span className="text-[#7B8B9C] font-normal text-lg mr-48">
-                ETH Price:
-              </span>
-              <span className="text-[#7B8B9C] text-lg">0.40 ETH</span>
-            </p>
+          {comboReady ? (
+            <div>
+              <div className="flex flex-col m-10 -mt-4 -mb-4">
+                <p>
+                  <span className="text-[#7B8B9C] font-normal text-lg mr-48">
+                    ETH Price:
+                  </span>
+                  <span className="text-[#7B8B9C] text-lg">0.40 ETH</span>
+                </p>
 
-            <p>
-              <span className="text-[#7B8B9C] font-normal text-lg mr-44">
-                XARA Price:
-              </span>
-              <span className="text-[#7B8B9C] text-lg">500 XARA</span>
-            </p>
-          </div>
+                <p>
+                  <span className="text-[#7B8B9C] font-normal text-lg mr-44">
+                    XARA Price:
+                  </span>
+                  <span className="text-[#7B8B9C] text-lg">500 XARA</span>
+                </p>
+              </div>
 
-          <div className="flex flex-row m-10 justify-between text-lg items-center ">
-            <Dropdown
-              label="Currency"
-              style={{
-                backgroundColor: "transparent",
-                border: "2px solid #8840C4",
-              }}
-            >
-              <Dropdown.Item>Ethereum</Dropdown.Item>
-              <Dropdown.Item>$XARA</Dropdown.Item>
-            </Dropdown>
+              <div className="flex flex-row m-10 justify-between text-lg items-center ">
+                <Dropdown
+                  label="Currency"
+                  style={{
+                    backgroundColor: "transparent",
+                    border: "2px solid #8840C4",
+                  }}
+                >
+                  <Dropdown.Item>Ethereum</Dropdown.Item>
+                  <Dropdown.Item>$XARA</Dropdown.Item>
+                </Dropdown>
 
-            <input
+                <input
                   type="text"
                   placeholder=""
                   value={comboAmount}
                   onChange={handleChange4}
                 />
 
-            <button onClick={(e)=>buyCombo(comboAmount)} className="w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
-              Buy
-            </button>
-          </div> 
-          </div> : <div> 
-            <p className=" flex flex-col m-10">
-              <span className="text-[#7B8B9C] text-lg">
-                COMING SOON!
-              </span>
-          </p>
-          </div>
-            }
+                <button
+                  onClick={(e) => buyCombo(comboAmount)}
+                  className="w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"
+                >
+                  Buy
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <p className=" flex flex-col m-10">
+                <span className="text-[#7B8B9C] text-lg">COMING SOON!</span>
+              </p>
+            </div>
+          )}
         </div>
       </div>
       <p className="text-[#7B8B9C] m-10 text-xl text-center  mb-10 laptop:mb-0 w-[98vw] ">
         Purchase a Land Site and Building Combo for a 10% discount and earn 25%
         more XARA from staking
       </p>
-      <div className="flex flex-col laptop:flex-row mb-10 pb-32 pt-20">
+      <div className="flex flex-col laptop:flex-row mb-10 pb-32 pt-20 laptop:pt-32">
         <img
           src="/eth.svg"
           style={{ color: "grey" }}

@@ -21,6 +21,7 @@ export const Faq = () => {
         paddingBottom: "18vh",
       }}
       className="flex flex-col items-center  m-auto"
+      id="faq"
     >
       <h1
         style={{ paddingBottom: "8vh" }}
@@ -156,8 +157,8 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
+        // style={{ color: "red", width: "60%", margin: "auto" }}
       />
       <Accordion
         style={{
@@ -234,8 +235,7 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
       />
       <Accordion
         style={{
@@ -316,8 +316,7 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
       />
       <Accordion
         style={{
@@ -393,8 +392,7 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
       />
       <Accordion
         style={{
@@ -462,8 +460,7 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
       />
       <Accordion
         style={{
@@ -509,8 +506,7 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
       />
       <Accordion
         style={{
@@ -578,8 +574,7 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
       />
       <Accordion
         style={{
@@ -660,8 +655,7 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
       />
       <Accordion
         style={{
@@ -732,8 +726,7 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
       />
       <Accordion
         style={{
@@ -786,8 +779,7 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
       />
       <Accordion
         style={{
@@ -846,8 +838,7 @@ export const Faq = () => {
         </AccordionDetails>
       </Accordion>
       <hr
-        className="w-[98vw] laptop:w-[60%] bg-white "
-        style={{ color: "#fff", margin: "auto" }}
+        className="w-[98vw] laptop:w-[60%] my-1 h-[1px] bg-gray-200 border-0  "
       />
     </div>
   );

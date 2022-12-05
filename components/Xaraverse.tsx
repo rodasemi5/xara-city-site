@@ -1,7 +1,6 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import YouTube from "react-youtube";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -30,18 +29,9 @@ function TabPanel(props: TabPanelProps) {
 
 export const Xaraverse = () => {
   const [value, setValue] = React.useState(0);
-  const videoOptions = {
-    playerVars: {
-      autoplay: 1,
-      controls: 0,
-      rel: 0,
-      showinfo: 0,
-      mute: 1,
-      loop: 1,
-    },
-  };
+
   return (
-    <section className=" w-full flex md:flex-row flex-col items-start pt-18 bg-[#020117]">
+    <section id="xaraverse" className=" w-full flex md:flex-row flex-col items-start pt-18 bg-[#020117]">
       <div className="w-[98vw] m-auto flex flex-col items-center">
         <h1
           className="
@@ -81,13 +71,12 @@ export const Xaraverse = () => {
               <source src="https://youtu.be/embed/jDL9PjY-8Oc" />
               Your browser does not support the video tag.
             </video> */}
-            {/* <iframe
+            <iframe
               src="https://www.youtube.com/embed/jDL9PjY-8Oc?playlist=jDL9PjY-8Oc&autoplay=1&muted=1&loop=1&rel=0&showinfo=0&controls=0"
               width="640"
               height="360"
               className="rounded-xl"
-            ></iframe> */}
-            <YouTube videoId="jDL9PjY-8Oc" opts={videoOptions} />
+            ></iframe>
             <button className="z-10  absolute text-white h-10 w-32 laptop:h-16 laptop:w-60 rotate-90 rounded-lg text-lg laptop:text-2xl bg-[#304AB1] left-[-3.2rem] laptop:left-[-6rem] top-1/2  ">
               View Map
             </button>
@@ -184,9 +173,9 @@ m-auto
                     </div>
                   </div>
 
-                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 rounded-xl m-auto laptop:m-20 laptop:-mt-4 w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
+                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 pl-12 pr-12 rounded-xl m-auto laptop:m-20 laptop:-mt-4 w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
                     <iframe
-                      src="https://www.youtube.com/embed/yxCoyxHdXT4"
+                      src="https://www.youtube.com/embed/yxCoyxHdXT4?playlist=yxCoyxHdXT4&autoplay=1&muted=1&loop=1&rel=0&showinfo=0&controls=0"
                       width="100%"
                       height="100%"
                       aria-controls="0"
@@ -244,9 +233,9 @@ m-auto
                     </div>
                   </div>
 
-                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 rounded-xl m-auto laptop:m-20 laptop:-mt-12 w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
+                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 pl-12 pr-12 rounded-xl m-auto laptop:m-20 laptop:-mt-12 w-[90%] h-[90%]  laptop:w-[640px] laptop:h-[360px]">
                     <iframe
-                      src="https://www.youtube.com/embed/p_GDohB4F14"
+                      src="https://www.youtube.com/embed/p_GDohB4F14?playlist=p_GDohB4F14&autoplay=1&muted=1&loop=1&rel=0&showinfo=0&controls=0"
                       width="100%"
                       height="100%"
                       aria-controls="0"
@@ -342,9 +331,9 @@ m-auto
                     </div>
                   </div>
 
-                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 rounded-xl m-auto laptop:m-20 laptop:-mt-4 w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
+                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 pl-12 pr-12 rounded-xl m-auto laptop:m-20 laptop:-mt-4 w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
                     <iframe
-                      src="https://www.youtube.com/embed/D8PAF0FzwuM"
+                      src="https://www.youtube.com/embed/D8PAF0FzwuM?playlist=D8PAF0FzwuM&autoplay=1&muted=1&loop=1&rel=0&showinfo=0&controls=0"
                       width="100%"
                       height="100%"
                       aria-controls="0"
@@ -486,9 +475,9 @@ m-auto
                     </div>
                   </div>
 
-                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 rounded-xl m-auto laptop:m-20  w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
+                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 pl-12 pr-12 rounded-xl m-auto laptop:m-20  w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
                     <iframe
-                      src="https://www.youtube.com/embed/X_br-ntZqOo"
+                      src="https://www.youtube.com/embed/X_br-ntZqOo?playlist=X_br-ntZqOo&autoplay=1&muted=1&loop=1&rel=0&showinfo=0&controls=0"
                       width="100%"
                       height="100%"
                       aria-controls="0"
