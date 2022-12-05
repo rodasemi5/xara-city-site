@@ -99,7 +99,7 @@ export const Main = (props: any) => {
 
           <div className="h-fit laptop:mt-10 ">
             <video width="500px" autoPlay muted controls={false} loop>
-              <source src="/xara_card.webm" type="video/webm" />
+              <source src="/xara_card2.webm" type="video/webm" />
               Your browser does not support the video tag.
             </video>
           </div>
