@@ -205,7 +205,8 @@ export const NFT = (props) => {
         <h1
           className="
             -mb-4
-            text-6xl
+            text-4xl
+            laptop:text-6xl
             font-extrabold 
             tracking-tight 
             leading-none 
@@ -215,24 +216,22 @@ export const NFT = (props) => {
             inline-block
             text-transparent
             bg-clip-text
- leading-snug
- p-24
+          p-24
             
             "
         >
           Upcoming NFT Mint
         </h1>
 
-        <div className=" w-4/5 h-fit p-4 flex flex-col laptop:flex-row rounded-lg ml-5 mr-5 items-center relative bg-[#030116]">
+        <div className="w-4/5 tablet:w-[700px] laptop:w-4/5 h-fit p-4 flex flex-col laptop:flex-row rounded-lg ml-5 mr-5 items-center relative bg-[#030116]">
           <div className="w-[98vw] flex-col rounded-lg ml-5 mr-5 mx-auto">
-            <div className="h-96 mx-auto">
+            <div className="h-82 mx-auto">
               <img
                 src="/mint_preview2.png"
                 alt=""
-                className="h-96 w-96 md:w-48 md:h-48 md:rounded-none mx-auto shadow-2xl shadow-black"
+                className="h-52 w-60 laptop:w-96 laptop:h-96 laptop:rounded mx-auto shadow-2xl shadow-black"
               />
-            </div>
-            <div className="h-20 w-96 text-center text-2xl text-white font-bold p-2 rounded-b-lg  mx-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+              <div className="w-60 laptop:h-20 laptop:w-96 text-center text-2xl text-white font-bold p-2 rounded-b-lg  mx-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
               Whitelist mint
               <p>
                 <Countdown
@@ -241,13 +240,16 @@ export const NFT = (props) => {
                 />
               </p>
             </div>
+            </div>
+            
           </div>
-          <div className="w-[98vw] ">
-            <div className="flex flex-col ">
+          <div className="w-[98vw] p-10">
+            <div className="flex flex-col text-center laptop:text-start">
               <h1
                 className="
             m-4 
-            text-5xl
+            text-2xl
+            laptop:text-5xl
             font-semibold
             tracking-tight 
             leading-none 
@@ -257,14 +259,13 @@ export const NFT = (props) => {
             inline-block
             text-transparent
             bg-clip-text
- leading-snug
             "
               >
                 Xarian Citizens
               </h1>
               <p
                 className="
-                m-4 
+                m-6
                 text-lg
                 font-semibold
                 tracking-tight 
@@ -273,8 +274,7 @@ export const NFT = (props) => {
                 dark:text-white 
                 inline-block
                 bg-clip-text
- leading-snug
- pr-4
+                pr-4
                 
                 "
               >
@@ -284,7 +284,7 @@ export const NFT = (props) => {
 
               <p
                 className="
-                m-4 
+                m-6 
                 -mt-1
                 text-lg
                 font-semibold
@@ -294,8 +294,7 @@ export const NFT = (props) => {
                 dark:text-white 
                 inline-block
                 bg-clip-text
- leading-snug
- pr-4
+                pr-4
                 
                 "
               >
@@ -304,7 +303,7 @@ export const NFT = (props) => {
 
               <p
                 className="
-                m-4 
+                m-6
                 -mt-1
                 text-lg
                 font-semibold
@@ -314,7 +313,6 @@ export const NFT = (props) => {
                 dark:text-white         
                 inline-block
                 bg-clip-text
- leading-snug
                 pr-4
                 "
               >
@@ -326,7 +324,7 @@ export const NFT = (props) => {
                 <div className="flex flex-row -mt-4 pb-1">
                   <p
                     className="
-                m-4 
+                m-6 
                 mt-6
                 text-lg
                 font-semibold
@@ -343,7 +341,7 @@ export const NFT = (props) => {
                 text-[#7B8B9C] md:text-5xl lg:text-6xl 
                 flex-1
                 pr-4
-                m-4
+                m-6
                 text-right"
                   >
                     7 Dec 2022
@@ -352,7 +350,7 @@ export const NFT = (props) => {
                 <div className="flex flex-row pb-1">
                   <p
                     className="
-                m-4
+                m-6
                 -mt-4
                 -mr-2
                 text-lg
@@ -368,7 +366,7 @@ export const NFT = (props) => {
                 text-lg
                 font-semibold
                 pr-4
-                m-4
+                m-6
                 flex-1
                 text-[#7B8B9C] md:text-5xl lg:text-6xl  text-right"
                   >
@@ -378,7 +376,7 @@ export const NFT = (props) => {
                 <div className="flex flex-row pb-4">
                   <p
                     className="
-                m-4 
+                m-6 
                 -mt-4
                 -mr-2
                 text-lg
@@ -392,7 +390,7 @@ export const NFT = (props) => {
                   </p>
                   <p
                     className="pr-4
-                m-4
+                m-6
                 flex-1 
                 -mt-4
                 text-lg
@@ -449,7 +447,7 @@ export const NFT = (props) => {
                           <Dropdown.Item>10</Dropdown.Item>
                         </Dropdown>*/}
                       </div>
-                      <div className="float-right mr-4 pr-4 -mt-2 w-[30%]">
+                      <div className="flex flex-row float-right mr-4 pr-4 -mt-2 w-[30%]">
                         <button
                           onClick={(e) => buyXarian(xarianAmount)}
                           className=" w-[6rem] laptop:flex-1 text-white border-3 text-2xl font-bold  h-14 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 float-right items-right "
@@ -484,7 +482,8 @@ export const NFT = (props) => {
           className="
             m-10 
             pt-20
-            text-6xl
+            text-4xl
+            laptop:text-6xl
             font-extrabold 
             tracking-tight 
             leading-none 
@@ -494,8 +493,7 @@ export const NFT = (props) => {
             inline-block
             text-transparent
             bg-clip-text
- leading-snug
- text-center
+            text-center
             
             "
         >
@@ -517,7 +515,6 @@ export const NFT = (props) => {
             inline-block
             text-transparent
             bg-clip-text
- leading-snug
             text-center
             "
         >
@@ -526,7 +523,7 @@ export const NFT = (props) => {
         </p>
       </div>
       <div className="w-[98vw] m-auto flex flex-col laptop:flex-row justify-center">
-        <div className="w-[96vw] m-auto max-w-[450px] laptop:w-[30%] m-auto h-fit laptop:m-[1.6%]  bg-[#1E0F2F] rounded-lg items-center justify-between mb-10 laptop:mb-0">
+        <div className="w-[96vw] m-auto max-w-[450px] laptop:w-[30%] h-fit laptop:m-[1.6%]  bg-[#1E0F2F] rounded-lg items-center justify-between mb-10 laptop:mb-0">
           <div className="w-4/5 m-5 rounded  mx-auto ">
             <Slider
               {...settings}
@@ -609,7 +606,7 @@ export const NFT = (props) => {
           )}
         </div>
 
-        <div className=" w-[96vw] m-auto max-w-[450px] laptop:w-[30%] m-auto h-fit laptop:m-[1.6%]  bg-[#1E0F2F] rounded-lg items-center  mb-10 laptop:mb-0">
+        <div className=" w-[96vw] m-auto max-w-[450px] laptop:w-[30%] h-fit laptop:m-[1.6%]  bg-[#1E0F2F] rounded-lg items-center  mb-10 laptop:mb-0">
           <div className="w-4/5 m-5 rounded  mx-auto">
             <Slider
               asNavFor={nav3}
@@ -692,7 +689,7 @@ export const NFT = (props) => {
           )}
         </div>
 
-        <div className="w-[96vw] m-auto max-w-[450px] laptop:w-[30%] m-auto h-fit laptop:m-[1.6%] bg-[#1E0F2F] rounded-lg items-center">
+        <div className="w-[96vw] m-auto max-w-[450px] laptop:w-[30%] h-fit laptop:m-[1.6%] bg-[#1E0F2F] rounded-lg items-center">
           <div className="w-4/5 = m-5 rounded  mx-auto">
             <Slider
               asNavFor={nav1}

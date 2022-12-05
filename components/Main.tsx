@@ -108,18 +108,15 @@ export const Main = (props: any) => {
       <div id="ecosystem" className="w-full p-20">
         <figure
           style={{ margin: "auto" }}
-          className="bg-[#000] rounded-xl mx-auto p-3 mt-5 items-center w-[98vw] laptop:w-[60vw] flex flex-row grid grid-cols-2 laptop:grid-cols-4"
+          className="bg-[#000] rounded-xl mx-auto p-3 mt-5 items-center w-[100vw] laptop:w-[60vw] grid grid-cols-2 laptop:grid-cols-4"
         >
-          <div className="pt-6 md:p-8 text-center md:text-left space-y-4 m-auto">
-            <div
-              style={{
-                width: "150px",
-                height: "150px",
-              }}
+          <div className="pt-6 laptop:p-8 text-center laptop:text-left space-y-4 m-auto">
+            <div className="w-[150px] h-[150px]"
+              
             >
               <CustomContentProgressbar color="#3e98c7">
                 <img
-                  className="w-28 h-28 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+                  className="w-24 h-28 laptop:w-28 md:h-auto md:rounded-none rounded mx-auto"
                   src="/Market_place.png"
                   alt=""
                 />
@@ -140,7 +137,7 @@ export const Main = (props: any) => {
             >
               <CustomContentProgressbar color="#3e98c7">
                 <img
-                  className="w-28 h-28 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+                  className="w-24 desktop:w-28 h-28 md:h-auto md:rounded-none rounded mx-auto"
                   src="/P2E.png"
                   alt=""
                   width="384"
@@ -163,7 +160,7 @@ export const Main = (props: any) => {
             >
               <CustomContentProgressbar color="#3e98c7">
                 <img
-                  className="w-28 h-28 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+                  className="w-24 h-28 laptop:w-28 md:h-auto md:rounded-none rounded mx-auto"
                   src="/metaverse.png"
                   alt=""
                   width="384"
@@ -186,7 +183,7 @@ export const Main = (props: any) => {
             >
               <CustomContentProgressbar color="#3e98c7">
                 <img
-                  className="w-28 h-28 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto"
+                  className="w-24 h-28 laptop:w-28 md:h-auto md:rounded-none rounded mx-auto"
                   src="/trade.png"
                   alt=""
                   width="384"

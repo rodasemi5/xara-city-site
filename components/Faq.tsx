@@ -29,7 +29,8 @@ export const Faq = () => {
             flex-1
             ss:text-[72px]
             ss:leading-[100px]
-            text-6xl
+            text-4xl
+            laptop:text-6xl
             font-bold 
             tracking-tight 
             leading-[75px]
@@ -39,7 +40,7 @@ export const Faq = () => {
             inline-block
             text-transparent
             bg-clip-text
-            mb-5
+            laptop:mb-5
             text-center
             "
       >

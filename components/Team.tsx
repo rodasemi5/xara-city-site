@@ -44,7 +44,8 @@ export const Team = () => {
       <div className="flex flex-col w-full justify-center items-center w-full pt-20 bg-[#020117] ">
         <h1
           className="
-            text-6xl
+            text-4xl
+            laptop:text-6xl
             font-bold 
             text-gray-900 md:text-5xl lg:text-6xl 
             bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500

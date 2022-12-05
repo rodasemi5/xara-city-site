@@ -31,11 +31,12 @@ export const Xaraverse = () => {
   const [value, setValue] = React.useState(0);
 
   return (
-    <section id="xaraverse" className=" w-full flex md:flex-row flex-col items-start pt-18 bg-[#020117]">
-      <div className="w-[98vw] m-auto flex flex-col items-center">
+    <section id="xaraverse" className="w-full flex md:flex-row flex-col items-start pt-20 bg-[#020117]">
+      <div className="w-96 laptop:w-[100vw] m-auto flex flex-col items-center">
         <h1
           className="
-            text-6xl
+            text-4xl
+            laptop:text-6xl
             font-bold 
             text-gray-900 md:text-5xl lg:text-6xl 
             bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500
@@ -62,7 +63,7 @@ export const Xaraverse = () => {
           experience
         </p>
 
-        <div className="w-full mb-0 relative">
+        <div className="w-full tablet:w-[820px] laptop:w-full mb-0 relative">
           <div
             id="video-container"
             className="aspect-w-16 aspect-h-9 pb-[56.65%] h-0 relative  z-[5] mb-0 "
@@ -87,7 +88,7 @@ export const Xaraverse = () => {
         </div>
 
         <div className="relative flex flex-col bg-[#0b091a] rounded border-t-1 border-slate-500 items-center">
-          <Box className="w-full">
+          <Box className="w-96 tablet:w-[820px] laptop:w-full">
             <TabPanel value={value} index={0}>
               <div>
                 <h1
@@ -116,15 +117,15 @@ export const Xaraverse = () => {
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-              w-full
-              text-center
-              laptop:text-left
-              m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; Stake NFTs in the Xara City Play-To-Earn
@@ -135,15 +136,15 @@ export const Xaraverse = () => {
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-w-full
-text-center
-laptop:text-left
-m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; Spend XARA earned from staking in the Xaraverse
@@ -155,15 +156,15 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-w-full
-text-center
-laptop:text-left
-m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; Swap or Trade USD for XARA to spend in-game,
@@ -173,14 +174,12 @@ m-auto
                     </div>
                   </div>
 
-                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 pl-12 pr-12 rounded-xl m-auto laptop:m-20 laptop:-mt-4 w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
+                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20  rounded-xl m-auto laptop:m-20 laptop:-mt-4 w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
                     <iframe
                       src="https://www.youtube.com/embed/yxCoyxHdXT4?playlist=yxCoyxHdXT4&autoplay=1&muted=1&loop=1&rel=0&showinfo=0&controls=0"
-                      width="100%"
-                      height="100%"
                       aria-controls="0"
                       frameBorder="0"
-                      className="rounded-xl"
+                      className="rounded-xl w-80 h-96 tablet:w-[700px] tablet:-ml-5 laptop:w-[700px] laptop:h-[500px]"
                       allowFullScreen
                     ></iframe>
                   </div>
@@ -215,15 +214,15 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-              w-full
-              text-center
-              laptop:text-left
-              m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; Upgrade Key NFTs into VR NFTS with Virtual
@@ -233,14 +232,13 @@ m-auto
                     </div>
                   </div>
 
-                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 pl-12 pr-12 rounded-xl m-auto laptop:m-20 laptop:-mt-12 w-[90%] h-[90%]  laptop:w-[640px] laptop:h-[360px]">
+                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20  rounded-xl m-auto laptop:m-20 laptop:-mt-12 w-[90%] h-[90%]  laptop:w-[640px] laptop:h-[360px]">
                     <iframe
                       src="https://www.youtube.com/embed/p_GDohB4F14?playlist=p_GDohB4F14&autoplay=1&muted=1&loop=1&rel=0&showinfo=0&controls=0"
-                      width="100%"
-                      height="100%"
+                      
                       aria-controls="0"
                       frameBorder="0"
-                      className="rounded-xl"
+                      className="rounded-xl w-80 h-96 tablet:w-[700px] laptop:w-[700px] laptop:h-[500px]"
                       allowFullScreen
                     ></iframe>
                   </div>
@@ -276,15 +274,15 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-              w-full
-              text-center
-              laptop:text-left
-              m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; The Xaraverse is an always-on digital
@@ -296,15 +294,15 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-w-full
-text-center
-laptop:text-left
-m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; The Xaraverse is poised to radically change how
@@ -315,15 +313,15 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-w-full
-text-center
-laptop:text-left
-m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; Spend $Xara earned in-game on VR Experiences…
@@ -331,14 +329,12 @@ m-auto
                     </div>
                   </div>
 
-                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 pl-12 pr-12 rounded-xl m-auto laptop:m-20 laptop:-mt-4 w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
+                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0  rounded-xl m-auto laptop:m-20 laptop:-mt-4 w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
                     <iframe
                       src="https://www.youtube.com/embed/D8PAF0FzwuM?playlist=D8PAF0FzwuM&autoplay=1&muted=1&loop=1&rel=0&showinfo=0&controls=0"
-                      width="100%"
-                      height="100%"
                       aria-controls="0"
                       frameBorder="0"
-                      className="rounded-xl"
+                      className="rounded-xl w-80 h-96 tablet:w-[700px] laptop:w-[700px] laptop:h-[500px] tablet:-ml-5 "
                       allowFullScreen
                     ></iframe>
                   </div>
@@ -374,15 +370,15 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-              w-full
-              text-center
-              laptop:text-left
-              m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; Rent Virtual Apartments in the Xaraverse…
@@ -391,15 +387,15 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-w-full
-text-center
-laptop:text-left
-m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; Mint Event or Raffle Tickets as NFTS…
@@ -408,15 +404,15 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-w-full
-text-center
-laptop:text-left
-m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; Get White Listed for Future Projects…
@@ -424,15 +420,15 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-w-full
-text-center
-laptop:text-left
-m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; Swap USD for $Xara to spend in the Xara City
@@ -441,16 +437,16 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-w-full
-text-center
-laptop:text-left
-m-auto
-                "
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
+                            "
                       >
                         &#8226; Fund Liquidity pools to earn yield on trading
                         fees or stake LP tokens in Farms to earn APR
@@ -458,15 +454,15 @@ m-auto
                       <p
                         className="
                         mt-2 mb-2 
-              text-xl
-              font-thin
-              text-[#7B8594]
-              inline-block
-              bg-clip-text
-w-full
-text-center
-laptop:text-left
-m-auto
+                        text-xl
+                        font-thin
+                        text-[#7B8594]
+                        inline-block
+                        bg-clip-text
+                        w-full
+                        text-center
+                        laptop:text-left
+                        m-auto
                 "
                       >
                         &#8226; Stake $Xara to earn an APR, take a DeFi loan or
@@ -474,15 +470,14 @@ m-auto
                       </p>
                     </div>
                   </div>
-
-                  <div className="aspect-w-16 aspect-h-9 laptop:pt-0 pb-20 pl-12 pr-12 rounded-xl m-auto laptop:m-20  w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
+                  {/* here */}
+                  <div className="aspect-w-16 aspect-h-9  rounded-xl  laptop:m-2  w-[90%] h-[90%] max-w-[640px] max-h-[360px] laptop:w-[640px] laptop:h-[360px]">
                     <iframe
                       src="https://www.youtube.com/embed/X_br-ntZqOo?playlist=X_br-ntZqOo&autoplay=1&muted=1&loop=1&rel=0&showinfo=0&controls=0"
-                      width="100%"
-                      height="100%"
+                      
                       aria-controls="0"
                       frameBorder="0"
-                      className="rounded-xl"
+                      className="rounded-xl w-80 h-96 tablet:w-[700px] laptop:w-[700px] laptop:h-[500px] ml-3 laptop:-ml-20 -mt-10"
                       allowFullScreen
                     ></iframe>
                   </div>
@@ -490,7 +485,7 @@ m-auto
               </div>
             </TabPanel>
           </Box>
-          <div className="absolute right-0 laptop:right-16 -bottom-6 laptop:bottom-0 p-10 justify-between">
+          <div className="absolute right-0 laptop:right-1 -bottom-32 laptop:-bottom-40 p-10 justify-between">
             <button
               onClick={() => {
                 if (value == 0) {

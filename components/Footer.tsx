@@ -17,7 +17,7 @@ export const FooterMain = () => {
                 alt="Xara Logo"
                 // name="Xara"
               />
-              <p className="text-gray-400 text-center tablet:text-start mt-2 pl-4 ml-16 m-auto tablet-m-unset">
+              <p className="text-gray-400 text-center tablet:text-start pl-4  m-auto tablet-m-unset">
                 Xaraverse@gmail.com
               </p>
             </div>
