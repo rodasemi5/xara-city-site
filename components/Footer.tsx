@@ -47,10 +47,10 @@ export const FooterMain = () => {
                 className="text-[#4258CF] normal-case mt-8"
               />
               <Footer.LinkGroup col={true}>
-                <Footer.Link href="#">Home</Footer.Link>
-                <Footer.Link href="#">Ecosystem</Footer.Link>
-                <Footer.Link href="#">FAQ</Footer.Link>
-                <Footer.Link href="#">Team</Footer.Link>
+                <Footer.Link href="#home">Home</Footer.Link>
+                <Footer.Link href="#ecosystem">Ecosystem</Footer.Link>
+                <Footer.Link href="#faq">FAQ</Footer.Link>
+                <Footer.Link href="#team">Team</Footer.Link>
                 <Footer.Link href="#">Gitbook</Footer.Link>
               </Footer.LinkGroup>
             </div>
@@ -73,10 +73,10 @@ export const FooterMain = () => {
                 className="text-[#4258CF] normal-case"
               />
               <Footer.LinkGroup col={true}>
-                <Footer.Link href="#">Discord</Footer.Link>
-                <Footer.Link href="#">Twitter</Footer.Link>
-                <Footer.Link href="#">Instagram</Footer.Link>
-                <Footer.Link href="#">Telegram</Footer.Link>
+                <Footer.Link href="https://discord.gg/JSgrt7fFxx">Discord</Footer.Link>
+                <Footer.Link href="https://www.twitter.com/XaraCity">Twitter</Footer.Link>
+                <Footer.Link href="https://instagram.com/xaracity?utxm_medium=copy_link">Instagram</Footer.Link>
+                <Footer.Link href="https://youtube.com/channel/UCtam3pdgV25gpxHcul-05nQ">Youtube</Footer.Link>
               </Footer.LinkGroup>
             </div>
           </div>
