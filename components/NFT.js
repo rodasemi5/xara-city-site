@@ -40,11 +40,26 @@ const buyXarianWL = async (amount) => {
       const xarianWithSigner = xarianContract.connect(signer);
       const eth = Math.floor(amount * 7);
       const options = { value: eth.toString() + "0000000000000000" };
-      const tx = xarianWithSigner.WLmint(amount, options);
+      const tx = await xarianWithSigner.WLmint(amount, options);
+      toast(
+        <div>
+          Track transaction:{" "}
+          <a href={"https://etherscan.io/tx/" + tx.hash} target="_blank">
+            Click here!
+          </a>{" "}
+        </div>,{
+        duration: 20000}
+      );
     }
   } catch (e) {
     console.log(e);
-    alert("Something went wrong!");
+    if(e.reason){
+      toast.error(e.reason,{
+        duration: 20000});
+    }else{
+      toast.error("Something went wrong!",{
+        duration: 20000});
+    }
   }
 };
 
@@ -60,21 +75,29 @@ const buyXarian = async (amount) => {
         provider
       );
       const xarianWithSigner = xarianContract.connect(signer);
-      const eth = Math.floor(amount * 5);
+      const eth = Math.floor(amount * 8);
       const options = { value: eth.toString() + "0000000000000000" };
       const tx = await xarianWithSigner.mint(amount, options);
+      console.log("Tx",tx)
       toast(
         <div>
           Track transaction:{" "}
-          <a href={"https://goerli.etherscan.io/tx/" + tx.hash} target="_blank">
+          <a href={"https://etherscan.io/tx/" + tx.hash} target="_blank">
             Click here!
           </a>{" "}
-        </div>
+        </div>,{
+        duration: 20000}
       );
     }
   } catch (e) {
     console.log(e);
-    toast.error("Something went wrong!");
+    if(e.reason){
+      toast.error(e.reason,{
+        duration: 20000});
+    }else{
+      toast.error("Something went wrong!",{
+        duration: 20000});
+    }
   }
 };
 
@@ -449,7 +472,7 @@ export const NFT = (props) => {
                       </div>
                       <div className="flex flex-row float-right mr-4 pr-4 -mt-2 w-[30%]">
                         <button
-                          onClick={(e) => buyXarian(xarianAmount)}
+                          onClick={(e) => buyXarianWL(xarianAmount)}
                           className=" w-[6rem] laptop:flex-1 text-white border-3 text-2xl font-bold  h-14 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 float-right items-right "
                         >
                           Mint
