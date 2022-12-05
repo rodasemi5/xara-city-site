@@ -33,9 +33,9 @@ export const Team = () => {
                 src="/discord.svg"
                 className="flex items-center justify-center  h-6 w-6 laptop:h-8 laptop:w-8"
               />{" "}
-              <p className="flex items-center justify-center ml-4  ">
+              <a href = "https://discord.gg/JSgrt7fFxx" className="flex items-center justify-center ml-4  ">
                 Join Discord
-              </p>
+              </a>
             </button>
           </div>
         </div>
