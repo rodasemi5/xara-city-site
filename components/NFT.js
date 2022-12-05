@@ -525,7 +525,7 @@ export const NFT = (props) => {
           staking
         </p>
       </div>
-      <div className="w-[98vw] m-auto flex flex-col laptop:flex-row">
+      <div className="w-[98vw] m-auto flex flex-col laptop:flex-row justify-center">
         <div className="w-[96vw] m-auto max-w-[450px] laptop:w-[30%] m-auto h-fit laptop:m-[1.6%]  bg-[#1E0F2F] rounded-lg items-center justify-between mb-10 laptop:mb-0">
           <div className="w-4/5 m-5 rounded  mx-auto ">
             <Slider
