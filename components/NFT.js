@@ -38,9 +38,9 @@ const buyXarianWL = async (amount) => {
         provider
       );
       const xarianWithSigner = xarianContract.connect(signer);
-      const eth = Math.floor(amount * 5);
+      const eth = Math.floor(amount * 6);
       const options = { value: eth.toString() + "0000000000000000" };
-      const tx = await xarianWithSigner.WLmint(amount, options);
+      const tx = await xarianWithSigner.mint(amount, options);
       toast(
         <div>
           Track transaction:{" "}
