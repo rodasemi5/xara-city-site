@@ -393,7 +393,7 @@ export const NFT = (props) => {
                 flex-1
                 text-[#7B8B9C] md:text-5xl lg:text-6xl  text-right"
                   >
-                    0.07 ETH
+                    0.05 ETH
                   </p>
                 </div>
                 <div className="flex flex-row pb-4">
@@ -420,7 +420,7 @@ export const NFT = (props) => {
                 font-semibold
                 text-[#7B8B9C] md:text-5xl lg:text-6xl text-right"
                   >
-                    0.08 ETH
+                    0.06 ETH
                   </p>
                 </div>
                 <div className="flex flex-row gap-10 mt-6">
