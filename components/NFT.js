@@ -255,7 +255,7 @@ export const NFT = (props) => {
                 className="h-52 w-60 laptop:w-96 laptop:h-96 laptop:rounded mx-auto shadow-2xl shadow-black"
               />
               <div className="w-60 laptop:h-20 laptop:w-96 text-center text-2xl text-white font-bold p-2 rounded-b-lg  mx-auto bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-              Whitelist mint
+              Public mint
               <p>
                 <Countdown
                   date={new Date("12/5/2022 23:00:00 GMT")}
@@ -430,7 +430,7 @@ export const NFT = (props) => {
                         <p className="m-4 text-[#7B8B9C] pr-4">
                           Select QTY
                           <br />
-                          Maximum - 10
+                          No Maximum
                         </p>
                       </div>
                       <div className="float-center w-[30%] ml-0">
