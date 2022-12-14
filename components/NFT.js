@@ -600,6 +600,13 @@ export const NFT = (props) => {
                   <Dropdown.Item>Ethereum</Dropdown.Item>
                 </Dropdown>
                 <input
+                                            style={{
+                                              width:"50px",
+                                              backgroundColor: "grey",
+                                              border: "2px solid #fff",
+                                              textAlign: "left",
+                                              float: "center",
+                                            }}
                   type="text"
                   placeholder=""
                   value={landAmount}
@@ -608,8 +615,7 @@ export const NFT = (props) => {
 
                 <button
                   onClick={(e) => buyLand(landAmount)}
-                  className=" w-[6rem] laptop:flex-1 text-white border-3 text-2xl font-bold  h-14 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 float-right items-right "
-                  >
+                  className="w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"                  >
                   Buy
                 </button>
               </div>
@@ -683,6 +689,13 @@ export const NFT = (props) => {
                 </Dropdown>
 
                 <input
+                style={{
+                  width:"50px",
+                  backgroundColor: "grey",
+                  border: "2px solid #fff",
+                  textAlign: "left",
+                  float: "center",
+                }}
                   type="text"
                   placeholder=""
                   value={buildAmount}
@@ -691,8 +704,7 @@ export const NFT = (props) => {
 
                 <button
                   onClick={(e) => buyBuilding(buildAmount)}
-                  className=" w-[6rem] laptop:flex-1 text-white border-3 text-2xl font-bold  h-14 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 float-right items-right "
-                  >
+                  className="w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"                  >
                   Buy
                 </button>
               </div>{" "}
@@ -777,6 +789,13 @@ export const NFT = (props) => {
                 </Dropdown>
 
                 <input
+                style={{
+                  width:"50px",
+                  backgroundColor: "grey",
+                  border: "2px solid #fff",
+                  textAlign: "left",
+                  float: "center",
+                }}
                   type="text"
                   placeholder=""
                   value={comboAmount}
@@ -785,8 +804,7 @@ export const NFT = (props) => {
 
                 <button
                   onClick={(e) => buyCombo(comboAmount)}
-                  className=" w-[6rem] laptop:flex-1 text-white border-3 text-2xl font-bold  h-14 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 float-right items-right "
-                  >
+                  className="w-32 text-white border-3 font-bold py-2 px-4 rounded bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500"                 >
                   Buy
                 </button>
               </div>
