@@ -160,6 +160,10 @@ export const Navbar = (props: Props) => {
                   </button>
               </Link>
             ))}
+            <a className="inline-flex items-center text-white font-bold py-2 px-4 rounded bg-fuchsia-700 hover:border-2 hover:bg-transparent hover:border-fuchsia-500 m-2 mt-6"
+           href="https://eth-xara-staking.vercel.app/"
+           target="_blank"
+            >Market Place</a>
           </Box>
         </Toolbar>
       </AppBar>
@@ -181,7 +185,12 @@ export const Navbar = (props: Props) => {
           }}
         >
           {drawer}
+          <a className="text-center"
+          href="https://eth-xara-staking.vercel.app/"
+          target="_blank"
+          >Market Place </a>
         </Drawer>
+        
       </Box>
     </Box>
   );

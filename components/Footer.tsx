@@ -60,7 +60,7 @@ export const FooterMain = () => {
                 className="text-[#4258CF] normal-case"
               />
               <Footer.LinkGroup col={true}>
-                <Footer.Link href="#">Market Place</Footer.Link>
+                <Footer.Link href="https://xara-city-staking.vercel.app/" target="_blank"> Solana Market Place</Footer.Link>
                 <Footer.Link href="#">Minting</Footer.Link>
                 <Footer.Link href="#">Collection</Footer.Link>
                 <Footer.Link href="#">Xaraverse</Footer.Link>
